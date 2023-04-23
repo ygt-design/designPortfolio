@@ -12,6 +12,7 @@
 
 .left {
     overflow-y: scroll;
+
 }
 
 .projects a {
@@ -23,6 +24,10 @@
     overflow-x: hidden;
 }
 
+ol {
+    margin-left: 3rem;
+}
+
 h1 {
     font-family: jaf-lapture-subhead, serif;
     font-weight: 100;
@@ -32,14 +37,20 @@ h1 {
 
 h2 {
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: 100;
+    font-weight: 50;
     margin-top: 4dvh;
     font-size: 1.5rem;
     margin-bottom: 1dvh;
 }
 
-ol {
-    margin-left: 3rem;
+h3 {
+    font-family: jaf-lapture-subhead, serif;
+    font-size: 1.3rem;
+    font-weight: 100;
+}
+
+.empDisp {
+    text-align: left;
 }
 
 li {
@@ -52,7 +63,6 @@ a {
     color: black;
     font-size: 1.3rem;
     font-weight: 100;
-    padding-bottom: 5dvh;
 }
 
 .left a:hover {
@@ -68,24 +78,26 @@ a {
 
 .rightMenu {
     position: relative;
+    width: auto;
     margin: 4dvh;
     margin-top: 7dvh;
-    align-content: right;
-    text-align: right;
     margin-bottom: -10dvh;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .rightMenu a {
     margin-right: 2vw;
-    justify-items: right;
-    text-align: right;
-    text-decoration: none;
 }
 
 .rightMenu a:hover {
     text-decoration: underline;
     text-decoration-thickness: 1px;
+}
 
+.rightM {
+    text-align: right;
 }
 
 .leftNest {
@@ -100,62 +112,111 @@ img {
     height: auto;
 }
 
+.stock {
+    margin: 4dvh;
+    margin-top: 13dvh;
+}
+
+.stock p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1rem;
+    font-weight: 100;
+    line-height: 1.5rem;
+}
+
+.stockGrid {
+    columns: 2;
+    column-gap: .5rem;
+}
+
+
+.center {
+    text-align: center;
+    font-style: italic;
+}
+
+.download {
+    font-size: 1.1rem;
+}
+
+.download:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+}
+
+.photo {
+    columns: 2;
+    column-gap: 10px;
+}
+
 .box {
-    height: 0;
     display: none;
-
 }
 
-.rotate {
-    animation: animName 2s linear infinite;
+.italized {
+    font-family: jaf-lapture-subhead, serif;
+    font-weight: medium;
+    font-size: 1.2rem;
+    font-style: italic;
 }
 
-
-@keyframes animName {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
+.stock h2 {
+    margin-bottom: -1dvh;
+    margin-top: 1dvh;
 }
 
+.stock p {
+    margin-bottom: 3dvh;
+    width: 100%;
+}
 
+/*  */
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1024px) {
+
     .container {
-        display: block;
+        display: flex;
     }
 
     .left {
-        transform: translate(-100vw);
-        height: 0;
+        display: none;
     }
 
-    .rightM {
+    .rightMenu {
         position: relative;
-        margin-top: 4dvh;
+        margin-top: 2dvh;
         align-content: right;
         text-align: right;
         margin-bottom: -10dvh;
     }
 
-    .rightMenu {
-        margin-top: 2dvh;
-        margin-right: 2dvh;
+    .right {
+        width: 100vw;
+    }
+
+    .rightM a {
+        margin-right: 2vw;
+    }
+
+    h3 {
+        text-align: left;
+    }
+
+    .stock p {
+        font-size: 1rem;
+        font-weight: 100;
+        line-height: 1.3rem;
+    }
+
+    .photo {
+        columns: 1;
     }
 
     .rightbox {
         display: none;
-        height: 0;
     }
 
     .box {
-        position: fixed;
         display: block;
-        height: auto;
-        width: 90vw;
     }
-
 }
